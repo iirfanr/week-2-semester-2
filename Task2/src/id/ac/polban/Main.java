@@ -18,73 +18,9 @@ public class Main {
         Employee emp2 = new Employee(2, "Siti", it, fullTime, 6000000);
         service.addEmployee(emp2);
 
-        service.printEmployeeDetails(1);
-        service.printEmployeeDetails(2);
+        service.printEmployeeDetails(emp1);
+        service.printEmployeeDetails(emp2);
         System.out.println("Total Karyawan: " + Employee.getEmployeeCount());
     }
 }
 
-/*Adapun ketentuan dan tugas praktikum adalah sebagai berikut:
-1.	Lengkapi studi kasus yang telah dibuat dengan menerapkan penggunaan static field dan static method secara tepat!
-    dimasukkan ke dalam class Employee untuk menghitung jumlah total karyawan yang telah dibuat.
-    dimasukkan totalemployeeCount sebagai static field, dan getEmployeeCount sebagai static method untuk mengaksesnya.
-
-2.	Buat diagram kelas (class diagram) yang menggambarkan struktur class, attribute, method, serta hubungan antar class dalam sistem.
-    Department
-    attributes:
-    - name: String
-    
-    methods:
-    - getName
-    - setName
-
-    EmploymentType
-    attributes:
-    - type: String
-
-    methods:
-    - getType
-    - setType
-
-    Employee
-    attributes:
-    - id: int
-    - name: String
-    - department: Department
-    - employmentType: EmploymentType
-    - salary: double
-    - employeeCount: int (static)
-
-    methods:
-    - getId
-    - setId
-    - getName
-    - setName
-    - getDepartment
-    - setDepartment
-    - getType
-    - setType
-    - getSalary
-    - setSalary
-    - getEmployeeCount
-
-    employeeService
-    attributes:
-    - employees: Map<Integer, Employee>
-
-    methods:
-    - addEmployee
-    - getEmployee
-    - raiseSalary
-
-    Dependency:
-    EmployeeService -> Employee (Menggunakan Employee untuk mengelola data karyawan)
-
-    Aggregation:
-    Employee -> Department (Employee memiliki Department)
-    Employee -> EmploymentType (Employee memiliki EmploymentType)
-
-Jelaskan perbedaan dan fungsi masing-masing jenis relasi tersebut berdasarkan kasus yang dibuat!
-    Dependency: hubungan sementara, digunakan di parameter method. contoh: employeeService menggunakan Employee.
-    Aggregation: Disimpan sebagai attribute, contoh: Employee memiliki Department dan EmploymentType.
- */

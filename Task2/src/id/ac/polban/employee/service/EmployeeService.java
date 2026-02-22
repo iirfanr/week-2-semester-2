@@ -24,8 +24,7 @@ public class EmployeeService {
         }
     }
 
-    public void printEmployeeDetails(int id) {
-        Employee emp = employees.get(id);
+    public void printEmployeeDetails(Employee emp) {
         if (emp != null) {
             System.out.println("id: " + emp.getId());
             System.out.println("Nama: " + emp.getName());
