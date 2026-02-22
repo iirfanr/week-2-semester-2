@@ -23,4 +23,15 @@ public class EmployeeService {
             emp.setSalary(emp.getSalary() * (1 + percent/100));
         }
     }
+
+    public void printEmployeeDetails(int id) {
+        Employee emp = employees.get(id);
+        if (emp != null) {
+            System.out.println("id: " + emp.getId());
+            System.out.println("Nama: " + emp.getName());
+            System.out.println("department: " + emp.getDepartment().getName());
+            System.out.println("employment type: " + emp.getEmploymentType().getType());
+            System.out.println("Gaji: " + emp.getSalary());
+        }
+    }
 }

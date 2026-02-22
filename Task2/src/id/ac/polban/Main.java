@@ -17,12 +17,9 @@ public class Main {
         service.raiseSalary(1, 10);
         Employee emp2 = new Employee(2, "Siti", it, fullTime, 6000000);
         service.addEmployee(emp2);
-        
 
-        System.out.println("Nama: " + emp1.getName());
-        System.out.println("Gaji: " + emp1.getSalary());
-        System.out.println("Nama: " + emp2.getName());
-        System.out.println("Gaji: " + emp2.getSalary());
+        service.printEmployeeDetails(1);
+        service.printEmployeeDetails(2);
         System.out.println("Total Karyawan: " + Employee.getEmployeeCount());
     }
 }
@@ -30,12 +27,9 @@ public class Main {
 /*Adapun ketentuan dan tugas praktikum adalah sebagai berikut:
 1.	Lengkapi studi kasus yang telah dibuat dengan menerapkan penggunaan static field dan static method secara tepat!
     dimasukkan ke dalam class Employee untuk menghitung jumlah total karyawan yang telah dibuat.
-2.	Terapkan konsep package dengan membuat minimal dua package, yaitu:
-●	id.ac.polban.employee.model
-●	id.ac.polban.employee.service
-    sudah terbuat pada studi kasus.
+    dimasukkan totalemployeeCount sebagai static field, dan getEmployeeCount sebagai static method untuk mengaksesnya.
+
 2.	Buat diagram kelas (class diagram) yang menggambarkan struktur class, attribute, method, serta hubungan antar class dalam sistem.
-    
     Department
     attributes:
     - name: String
@@ -83,7 +77,6 @@ public class Main {
     - getEmployee
     - raiseSalary
 
-
     Dependency:
     EmployeeService -> Employee (Menggunakan Employee untuk mengelola data karyawan)
 
@@ -94,7 +87,4 @@ public class Main {
 Jelaskan perbedaan dan fungsi masing-masing jenis relasi tersebut berdasarkan kasus yang dibuat!
     Dependency: hubungan sementara, digunakan di parameter method. contoh: employeeService menggunakan Employee.
     Aggregation: Disimpan sebagai attribute, contoh: Employee memiliki Department dan EmploymentType.
-
-Lakukan proses generate aplikasi ke dalam file JAR!
-    
  */

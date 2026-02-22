@@ -36,10 +36,10 @@ public class Employee {
     public void setDepartment(Department department) {
         this.department = department;
     }
-    public EmploymentType getType() {
+    public EmploymentType getEmploymentType() {
         return type;
     }
-    public void setType(EmploymentType type) {
+    public void setEmploymentType(EmploymentType type) {
         this.type = type;
     }
     public double getSalary() {
